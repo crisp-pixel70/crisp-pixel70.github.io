@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>反差大赛 - 官方视频社区 | 记录真实反差故事</title>
+<meta name="description" content="反差大赛官方网站，专注真实反差故事的视频内容社区，汇聚原创创作者、精品内容与企业动态，持续运营值得信赖的视频品牌平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f4f1ea'/%3E%3Ccircle cx='24' cy='32' r='12' fill='%23141a2b'/%3E%3Ccircle cx='42' cy='32' r='12' fill='%23e8572a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --fc-ink:#141a2b;
+  --fc-ink-soft:#2a3352;
+  --fc-paper:#f4f1ea;
+  --fc-paper-2:#ece7dc;
+  --fc-accent:#e8572a;
+  --fc-accent-2:#2f6f8f;
+  --fc-muted:#6b6a63;
+  --fc-line:#d8d2c4;
+  --fc-radius:14px;
+  --fc-shadow:0 10px 30px rgba(20,26,43,.10);
+  --fc-sticky-h:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--fc-sticky-h)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--fc-paper);
+  color:var(--fc-ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input{font-family:inherit}
+.fc-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.fc-eyebrow{
+  display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--fc-accent);font-weight:700;margin-bottom:10px;
+}
+.fc-h2{font-size:clamp(24px,3vw,34px);line-height:1.25;letter-spacing:-.01em;font-weight:800;color:var(--fc-ink)}
+.fc-h3{font-size:19px;font-weight:700;line-height:1.4;color:var(--fc-ink)}
+.fc-lead{color:var(--fc-muted);font-size:16px;line-height:1.85}
+.fc-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;
+  font-size:14px;font-weight:700;transition:.25s;border:1.5px solid transparent;
+}
+.fc-btn--primary{background:var(--fc-accent);color:#fff}
+.fc-btn--primary:hover{background:#cf4820;transform:translateY(-2px)}
+.fc-btn--ghost{border-color:var(--fc-ink);color:var(--fc-ink)}
+.fc-btn--ghost:hover{background:var(--fc-ink);color:var(--fc-paper)}
+.fc-btn--mini{padding:6px 14px;font-size:12.5px;border-radius:999px;border:1px solid var(--fc-line);background:#fff;color:var(--fc-ink-soft)}
+.fc-btn--mini:hover{border-color:var(--fc-accent);color:var(--fc-accent)}
+.fc-btn--mini.is-active{background:var(--fc-accent);border-color:var(--fc-accent);color:#fff}
+
+/* ---------- 吸顶区 ---------- */
+.fc-sticky{position:sticky;top:0;z-index:60}
+.fc-announce{
+  background:var(--fc-ink);color:var(--fc-paper);
+  font-size:13px;line-height:1.5;padding:9px 0;
+}
+.fc-announce .fc-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fc-announce-tag{
+  background:var(--fc-accent);color:#fff;font-weight:700;font-size:11px;
+  padding:2px 9px;border-radius:4px;letter-spacing:.08em;white-space:nowrap;
+}
+.fc-announce-text{opacity:.92}
+.fc-announce-link{margin-left:auto;color:#ffd9c9;font-weight:600;border-bottom:1px solid rgba(255,217,201,.5);white-space:nowrap}
+.fc-announce-link:hover{color:#fff}
+
+.fc-header{background:rgba(244,241,234,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--fc-line)}
+.fc-header .fc-wrap{display:flex;align-items:center;gap:20px;height:64px}
+.fc-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.01em;white-space:nowrap}
+.fc-brand-mark{width:30px;height:30px;flex:0 0 30px;position:relative}
+.fc-brand-mark::before,.fc-brand-mark::after{
+  content:"";position:absolute;top:4px;width:18px;height:22px;border-radius:50%;
+}
+.fc-brand-mark::before{left:0;background:var(--fc-ink);border-radius:50% 0 0 50%/50% 0 0 50%}
+.fc-brand-mark::after{right:0;background:var(--fc-accent);border-radius:0 50% 50% 0/0 50% 50% 0}
+.fc-brand small{display:block;font-size:9px;letter-spacing:.2em;color:var(--fc-muted);font-weight:600}
+.fc-nav{display:flex;gap:22px;margin-left:8px}
+.fc-nav a{font-size:14.5px;font-weight:600;color:var(--fc-ink-soft);padding:6px 0;position:relative}
+.fc-nav a:hover{color:var(--fc-accent)}
+.fc-nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--fc-accent);transition:.25s}
+.fc-nav a:hover::after{width:100%}
+.fc-search{
+  margin-left:auto;display:flex;align-items:center;gap:6px;
+  background:#fff;border:1px solid var(--fc-line);border-radius:999px;padding:4px 4px 4px 14px;
+}
+.fc-search input{border:none;outline:none;width:150px;font-size:13.5px;background:transparent;color:var(--fc-ink)}
+.fc-search input::placeholder{color:#a3a096}
+.fc-search button{background:var(--fc-ink);color:#fff;border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:700}
+.fc-search button:hover{background:var(--fc-accent)}
+.fc-search-feedback{
+  display:none;font-size:12.5px;color:var(--fc-accent-2);margin-left:8px;font-weight:600;white-space:nowrap;
+}
+.fc-search-feedback.is-on{display:inline}
+.fc-burger{display:none;flex-direction:column;gap:4px;padding:8px}
+.fc-burger span{width:22px;height:2px;background:var(--fc-ink);border-radius:2px;transition:.25s}
+
+/* ---------- 首屏 ---------- */
+.fc-hero{padding:52px 0 20px;position:relative;overflow:hidden}
+.fc-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.fc-hero-title{font-size:clamp(38px,5.4vw,66px);line-height:1.06;font-weight:900;letter-spacing:-.025em}
+.fc-hero-title span{color:var(--fc-accent)}
+.fc-hero-sub{margin-top:12px;font-size:17px;font-weight:600;color:var(--fc-ink-soft)}
+.fc-hero-desc{margin-top:18px;color:var(--fc-muted);font-size:15.5px;line-height:1.9}
+.fc-hero-desc strong{color:var(--fc-ink);font-weight:700}
+.fc-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.fc-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.fc-stat{background:#fff;border:1px solid var(--fc-line);border-radius:var(--fc-radius);padding:14px 16px}
+.fc-stat b{display:block;font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--fc-ink)}
+.fc-stat small{font-size:12px;color:var(--fc-muted);letter-spacing:.04em}
+.fc-hero-visual{position:relative}
+.fc-hero-visual figure{border-radius:22px;overflow:hidden;box-shadow:var(--fc-shadow);background:var(--fc-ink)}
+.fc-hero-visual svg{width:100%;height:auto;display:block}
+.fc-hero-badge{
+  position:absolute;left:-14px;bottom:26px;background:#fff;border-radius:14px;
+  padding:12px 18px;box-shadow:var(--fc-shadow);border:1px solid var(--fc-line);
+  font-size:12.5px;font-weight:700;color:var(--fc-ink-soft);line-height:1.5;
+}
+.fc-hero-badge em{font-style:normal;color:var(--fc-accent);display:block;font-size:18px;letter-spacing:-.01em}
+
+/* ---------- 通用 section ---------- */
+.fc-section{padding:64px 0}
+.fc-section--alt{background:var(--fc-paper-2)}
+.fc-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.fc-section-head p{max-width:520px}
+
+/* ---------- 焦点 ---------- */
+.fc-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:28px}
+.fc-focus-main{background:#fff;border:1px solid var(--fc-line);border-radius:18px;overflow:hidden;box-shadow:var(--fc-shadow);display:flex;flex-direction:column}
+.fc-focus-media{position:relative;background:var(--fc-ink)}
+.fc-focus-media svg{width:100%;height:auto}
+.fc-focus-body{padding:24px 26px 26px}
+.fc-focus-body .fc-h3{font-size:22px;margin-bottom:10px}
+.fc-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--fc-muted);margin-top:14px;align-items:center}
+.fc-meta strong{color:var(--fc-ink-soft)}
+.fc-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.fc-tag{font-size:11.5px;padding:3px 10px;border-radius:999px;background:var(--fc-paper-2);color:var(--fc-ink-soft);font-weight:600}
+.fc-focus-side{display:flex;flex-direction:column;gap:16px}
+.fc-side-item{
+  background:#fff;border:1px solid var(--fc-line);border-radius:14px;padding:18px 20px;
+  transition:.22s;display:block;
+}
+.fc-side-item:hover{transform:translateY(-3px);border-color:var(--fc-accent);box-shadow:var(--fc-shadow)}
+.fc-side-item .fc-idx{font-size:12px;font-weight:800;color:var(--fc-accent);letter-spacing:.12em}
+.fc-side-item h3{font-size:16.5px;margin:4px 0 6px;line-height:1.45}
+.fc-side-item p{font-size:13.5px;color:var(--fc-muted);line-height:1.7}
+.fc-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+/* ---------- 视频列表 ---------- */
+.fc-video-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--fc-line)}
+.fc-video-row{
+  display:grid;grid-template-columns:86px 1fr auto;gap:20px;align-items:center;
+  padding:22px 6px;border-bottom:1px solid var(--fc-line);transition:.22s;
+}
+.fc-video-row:hover{background:rgba(255,255,255,.65);padding-left:14px}
+.fc-video-num{font-size:30px;font-weight:900;color:var(--fc-line);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.fc-video-body h3{font-size:17.5px;margin-bottom:5px;line-height:1.45}
+.fc-video-body p{font-size:13.8px;color:var(--fc-muted);line-height:1.72;max-width:720px}
+.fc-video-aside{text-align:right;font-size:12.5px;color:var(--fc-muted);display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.fc-video-aside b{color:var(--fc-ink-soft);font-size:14px}
+.fc-thumb-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-bottom:34px}
+.fc-thumb-card{background:#fff;border:1px solid var(--fc-line);border-radius:16px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.fc-thumb-card:hover{transform:translateY(-5px);box-shadow:var(--fc-shadow);border-color:#c9c1af}
+.fc-thumb-card figure{background:var(--fc-ink-soft);overflow:hidden}
+.fc-thumb-card figure svg{width:100%;height:auto}
+.fc-thumb-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.fc-thumb-body h3{font-size:16px;line-height:1.45;margin-bottom:6px}
+.fc-thumb-body p{font-size:13px;color:var(--fc-muted);line-height:1.7;flex:1}
+
+/* ---------- 专题 ---------- */
+.fc-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.fc-topic{
+  background:#fff;border:1px solid var(--fc-line);border-radius:16px;padding:26px;
+  display:flex;flex-direction:column;gap:14px;transition:.25s;
+}
+.fc-topic:hover{box-shadow:var(--fc-shadow);transform:translateY(-3px)}
+.fc-topic--wide{grid-column:span 2;display:grid;grid-template-columns:220px 1fr;gap:26px;padding:0;overflow:hidden}
+.fc-topic--wide figure{background:var(--fc-accent-2);margin:0}
+.fc-topic--wide figure svg{width:100%;height:100%;object-fit:cover}
+.fc-topic--wide .fc-topic-inner{padding:26px 28px 26px 0;display:flex;flex-direction:column;gap:12px}
+.fc-topic-status{font-size:11.5px;font-weight:800;letter-spacing:.1em;color:var(--fc-accent-2);text-transform:uppercase}
+.fc-topic ul{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13.5px}
+.fc-topic ul li{display:flex;gap:10px;color:var(--fc-ink-soft);line-height:1.6}
+.fc-topic ul li::before{content:"—";color:var(--fc-accent);font-weight:800;flex:0 0 auto}
+.fc-topic ul li span{color:var(--fc-muted);font-size:12.5px}
+
+/* ---------- 创作者 ---------- */
+.fc-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.fc-author{
+  background:#fff;border:1px solid var(--fc-line);border-radius:16px;padding:24px;
+  display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;transition:.25s;
+}
+.fc-author:hover{border-color:var(--fc-accent);box-shadow:var(--fc-shadow)}
+.fc-avatar{
+  width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:20px;color:#fff;flex:0 0 58px;letter-spacing:-.02em;
+}
+.fc-author h3{font-size:17px;margin-bottom:2px}
+.fc-author .fc-skill{font-size:12.5px;color:var(--fc-accent);font-weight:700;letter-spacing:.02em}
+.fc-author p{font-size:13.4px;color:var(--fc-muted);line-height:1.72;margin-top:8px}
+.fc-author-stats{display:flex;gap:16px;font-size:12px;color:var(--fc-muted);margin-top:10px}
+.fc-author-stats b{color:var(--fc-ink-soft);font-size:13.5px}
+
+/* ---------- 解析 ---------- */
+.fc-define{max-width:900px}
+.fc-define .fc-h3{margin-top:30px;margin-bottom:10px;padding-left:14px;border-left:4px solid var(--fc-accent)}
+.fc-define p{color:var(--fc-muted);font-size:15px;line-height:1.95;margin-bottom:12px}
+.fc-define p strong{color:var(--fc-ink);font-weight:700}
+.fc-define-block{background:#fff;border:1px solid var(--fc-line);border-radius:18px;padding:34px 36px;box-shadow:var(--fc-shadow)}
+
+/* ---------- 评价 ---------- */
+.fc-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.fc-review{background:#fff;border:1px solid var(--fc-line);border-radius:14px;padding:22px;transition:.22s}
+.fc-review:hover{transform:translateY(-3px);box-shadow:var(--fc-shadow)}
+.fc-review-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.fc-review-top .fc-avatar{width:34px;height:34px;flex:0 0 34px;font-size:13px}
+.fc-review-top b{font-size:14px}
+.fc-review-top time{margin-left:auto;font-size:11.5px;color:#a3a096}
+.fc-review p{font-size:13.8px;color:var(--fc-ink-soft);line-height:1.78}
+.fc-stars{color:var(--fc-accent);font-size:13px;letter-spacing:2px;margin-top:8px}
+
+/* ---------- 动态 ---------- */
+.fc-news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.fc-news{background:#fff;border:1px solid var(--fc-line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.fc-news time{font-size:12px;color:var(--fc-accent);font-weight:700;letter-spacing:.06em}
+.fc-news h3{font-size:16.5px;line-height:1.5}
+.fc-news p{font-size:13.5px;color:var(--fc-muted);line-height:1.72}
+
+/* ---------- FAQ ---------- */
+.fc-faq{max-width:860px;display:flex;flex-direction:column;gap:10px}
+.fc-faq details{background:#fff;border:1px solid var(--fc-line);border-radius:12px;padding:2px 20px}
+.fc-faq summary{
+  cursor:pointer;font-weight:700;font-size:15px;padding:16px 0;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.fc-faq summary::-webkit-details-marker{display:none}
+.fc-faq summary::after{content:"+";font-size:20px;color:var(--fc-accent);font-weight:400;transition:.2s}
+.fc-faq details[open] summary::after{transform:rotate(45deg)}
+.fc-faq details p{font-size:14px;color:var(--fc-muted);line-height:1.85;padding-bottom:16px}
+
+/* ---------- 合作 & 投稿 ---------- */
+.fc-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.fc-partner{
+  background:#fff;border:1px solid var(--fc-line);border-radius:12px;padding:22px 16px;text-align:center;
+  font-weight:700;font-size:14.5px;color:var(--fc-ink-soft);transition:.22s;
+}
+.fc-partner:hover{background:var(--fc-ink);color:var(--fc-paper);transform:translateY(-3px)}
+.fc-partner small{display:block;font-size:11.5px;font-weight:500;color:var(--fc-muted);margin-top:4px}
+.fc-partner:hover small{color:#b9c3dd}
+.fc-join{
+  margin-top:22px;background:var(--fc-ink);color:var(--fc-paper);border-radius:18px;
+  padding:34px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+}
+.fc-join h3{font-size:22px;margin-bottom:6px;color:#fff}
+.fc-join p{font-size:14px;color:#c3cadb;max-width:540px}
+
+/* ---------- 页脚 ---------- */
+.fc-footer{background:var(--fc-ink);color:#c3cadb;padding:54px 0 0;margin-top:20px}
+.fc-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:34px;padding-bottom:38px}
+.fc-footer h4{color:#fff;font-size:14px;font-weight:800;margin-bottom:14px;letter-spacing:.04em}
+.fc-footer a{display:block;font-size:13.5px;color:#b0b9ce;padding:4px 0;transition:.2s}
+.fc-footer a:hover{color:var(--fc-accent)}
+.fc-footer p{font-size:13px;line-height:1.85;color:#9aa4bd}
+.fc-footer-brand{font-weight:800;color:#fff;font-size:19px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.fc-footer-bottom{border-top:1px solid #2f3853;padding:20px 0;font-size:12.5px;color:#8d97b1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- 弹窗 / Toast / 置顶 ---------- */
+.fc-modal{
+  position:fixed;inset:0;background:rgba(20,26,43,.55);display:none;align-items:center;justify-content:center;
+  z-index:120;padding:20px;
+}
+.fc-modal.is-open{display:flex}
+.fc-modal-box{background:#fff;border-radius:18px;max-width:460px;width:100%;padding:28px;box-shadow:0 24px 60px rgba(0,0,0,.28);position:relative}
+.fc-modal-box h3{font-size:19px;margin-bottom:10px}
+.fc-modal-box p{font-size:14px;color:var(--fc-muted);line-height:1.8}
+.fc-modal-close{position:absolute;top:14px;right:16px;font-size:22px;color:var(--fc-muted);line-height:1}
+.fc-modal-close:hover{color:var(--fc-accent)}
+.fc-modal-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.fc-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:var(--fc-ink);color:#fff;
+  padding:12px 22px;border-radius:999px;font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;
+  transition:.3s;z-index:200;box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+.fc-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.fc-top{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;background:var(--fc-accent);
+  color:#fff;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 8px 22px rgba(232,87,42,.4);
+  opacity:0;pointer-events:none;transition:.3s;z-index:90;
+}
+.fc-top.is-on{opacity:1;pointer-events:auto}
+.fc-top:hover{background:#cf4820}
+
+@media (max-width:980px){
+  .fc-hero-grid{grid-template-columns:1fr;gap:34px}
+  .fc-focus-grid{grid-template-columns:1fr}
+  .fc-topic--wide{grid-column:span 1;grid-template-columns:1fr}
+  .fc-topic--wide .fc-topic-inner{padding:0 26px 26px}
+  .fc-topic--wide figure svg{height:180px}
+  .fc-footer-grid{grid-template-columns:1fr 1fr}
+  .fc-thumb-row{grid-template-columns:1fr 1fr}
+  .fc-news-grid{grid-template-columns:1fr 1fr}
+  .fc-partners{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--fc-sticky-h:112px}
+  .fc-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;
+    padding:14px 22px 20px;gap:4px;box-shadow:0 16px 30px rgba(0,0,0,.12);border-bottom:1px solid var(--fc-line);
+  }
+  .fc-nav.is-open{display:flex}
+  .fc-nav a{padding:10px 0;border-bottom:1px solid #f0ece2;font-size:15px}
+  .fc-header .fc-wrap{height:60px;position:relative}
+  .fc-search input{width:96px}
+  .fc-burger{display:flex}
+  .fc-hero{padding:36px 0 10px}
+  .fc-hero-stats{grid-template-columns:1fr;gap:10px}
+  .fc-video-row{grid-template-columns:1fr;gap:10px;padding:18px 0}
+  .fc-video-num{font-size:22px}
+  .fc-video-aside{align-items:flex-start;text-align:left;flex-direction:row;gap:14px;flex-wrap:wrap}
+  .fc-thumb-row{grid-template-columns:1fr}
+  .fc-topic-grid{grid-template-columns:1fr}
+  .fc-authors{grid-template-columns:1fr}
+  .fc-reviews{grid-template-columns:1fr}
+  .fc-news-grid{grid-template-columns:1fr}
+  .fc-partners{grid-template-columns:1fr 1fr}
+  .fc-define-block{padding:24px 20px}
+  .fc-join{padding:26px 22px}
+  .fc-footer-grid{grid-template-columns:1fr;gap:24px}
+  .fc-section{padding:46px 0}
+  .fc-hero-badge{left:10px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头（吸顶） -->
+<div class="fc-sticky">
+  <div class="fc-announce">
+    <div class="fc-wrap">
+      <span class="fc-announce-tag">官方发布</span>
+      <span class="fc-announce-text">第三届「反差大赛」秋季赛报名通道已开启，新增「素人改造」与「前99秒」两个赛道 · 10月28日更新</span>
+      <a class="fc-announce-link" href="#fc-join">立即报名 →</a>
+    </div>
+  </div>
+  <header class="fc-header">
+    <div class="fc-wrap">
+      <a class="fc-brand" href="#fc-top">
+        <span class="fc-brand-mark" aria-hidden="true"></span>
+        <span>反差大赛<small>FANCHA CONTEST</small></span>
+      </a>
+      <nav class="fc-nav" id="fcNav" aria-label="主导航">
+        <a href="#fc-focus">焦点内容</a>
+        <a href="#fc-videos">热门视频</a>
+        <a href="#fc-topics">专题企划</a>
+        <a href="#fc-authors">创作者</a>
+        <a href="#fc-define">品牌解析</a>
+        <a href="#fc-reviews">社区口碑</a>
+        <a href="#fc-faq">帮助</a>
+      </nav>
+      <div class="fc-search">
+        <input id="fcSearchInput" type="search" placeholder="搜索反差故事 / 赛道" aria-label="搜索内容">
+        <button type="button" id="fcSearchBtn">搜索</button>
+      </div>
+      <span class="fc-search-feedback" id="fcSearchFeedback" role="status" aria-live="polite"></span>
+      <button class="fc-burger" id="fcBurger" aria-label="展开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<!-- S2 + M1 首屏 -->
+<section class="fc-hero" id="fc-top">
+  <div class="fc-wrap">
+    <div class="fc-hero-grid">
+      <div>
+        <span class="fc-eyebrow">官方网站 · 企业级视频品牌</span>
+        <h1 class="fc-hero-title">反差大赛<span>官网</span></h1>
+        <p class="fc-hero-sub">记录真实反差故事，发现平凡生活里最不平凡的转折</p>
+        <p class="fc-hero-desc">
+          反差大赛是专注「反差叙事」的原创视频内容平台，也是国内垂直领域内持续运营的内容社区。我们鼓励创作者用镜头记录身份、场景与情绪的强烈落差——从清晨的环卫工到夜晚的舞台主唱，从不敢开口到站上开放麦。<strong>作为官方网站，我们提供高清正版视频展示、创作者成长支持与品牌共建服务</strong>，让每一次反差都成为值得被看见的力量。
+        </p>
+        <div class="fc-hero-actions">
+          <a class="fc-btn fc-btn--primary" href="#fc-videos">观看精品内容</a>
+          <a class="fc-btn fc-btn--ghost" href="#fc-join">投稿参赛</a>
+          <a class="fc-btn fc-btn--ghost" href="#fc-define">了解品牌</a>
+        </div>
+        <div class="fc-hero-stats">
+          <div class="fc-stat"><b>12,860+</b><small>原创反差作品</small></div>
+          <div class="fc-stat"><b>3.4 亿</b><small>累计播放量</small></div>
+          <div class="fc-stat"><b>286</b><small>签约创作者</small></div>
+        </div>
+      </div>
+      <div class="fc-hero-visual">
+        <figure>
+          <svg viewBox="0 0 640 460" role="img" aria-label="反差大赛首屏主视觉：同一人物白天与夜晚两种身份的分屏构图">
+            <defs>
+              <linearGradient id="fcHeroSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f0e3c8"/>
+                <stop offset="100%" stop-color="#e7c9a2"/>
+              </linearGradient>
+              <linearGradient id="fcHeroNight" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1c2540"/>
+                <stop offset="100%" stop-color="#2b3a63"/>
+              </linearGradient>
+              <linearGradient id="fcHeroAccent" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#e8572a"/>
+                <stop offset="100%" stop-color="#f2a04a"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="460" fill="url(#fcHeroSky)"/>
+            <rect x="320" width="320" height="460" fill="url(#fcHeroNight)"/>
+            <circle cx="160" cy="120" r="54" fill="#f6d9a8" opacity=".85"/>
+            <circle cx="470" cy="96" r="30" fill="#f2f0e6" opacity=".9"/>
+            <circle cx="487" cy="88" r="30" fill="url(#fcHeroNight)"/>
+            <path d="M0 340 L120 300 L230 350 L320 316 L320 460 L0 460 Z" fill="#c9a877"/>
+            <path d="M320 350 L420 306 L540 348 L640 320 L640 460 L320 460 Z" fill="#22305a"/>
+            <g fill="#3a2a1c">
+              <circle cx="160" cy="268" r="26"/>
+              <rect x="140" y="292" width="40" height="76" rx="16"/>
+              <rect x="118" y="298" width="22" height="52" rx="10"/>
+              <rect x="182" y="298" width="22" height="52" rx="10"/>
+            </g>
+            <g fill="#ffce6b">
+              <circle cx="470" cy="272" r="26"/>
+              <rect x="450" y="296" width="40" height="74" rx="16"/>
+              <rect x="424" y="300" width="24" height="54" rx="12" transform="rotate(-16 436 327)"/>
+            </g>
+            <rect x="300" y="0" width="40" height="460" fill="#f4f1ea" opacity=".9"/>
+            <circle cx="320" cy="230" r="26" fill="url(#fcHeroAccent)"/>
+            <path d="M312 230 l12 -10 l0 20 z" fill="#fff"/>
+            <g font-family="sans-serif" font-size="15" font-weight="700" fill="#5a4326">
+              <text x="42" y="414">上班 · 环卫工</text>
+            </g>
+            <g font-family="sans-serif" font-size="15" font-weight="700" fill="#e9eefc">
+              <text x="360" y="414">下班 · 主唱</text>
+            </g>
+          </svg>
+        </figure>
+        <div class="fc-hero-badge">本周高热赛道<em>素人改造</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 焦点内容 -->
+<section class="fc-section" id="fc-focus">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">Focus · 焦点内容</span>
+        <h2 class="fc-h2">本周反差大赛焦点推荐</h2>
+      </div>
+      <p class="fc-lead">编辑部从每日上百条投稿中，挑出叙事完整、情绪真实、完成度高的作品。它们共同证明了反差大赛社区的品质标准。</p>
+    </div>
+    <div class="fc-focus-grid">
+      <article class="fc-focus-main">
+        <div class="fc-focus-media">
+          <svg viewBox="0 0 720 405" role="img" aria-label="焦点作品封面：白天在菜市场收摊的阿姨在空货架上起舞">
+            <rect width="720" height="405" fill="#e9dfcd"/>
+            <rect y="250" width="720" height="155" fill="#b8a387"/>
+            <g fill="#8d7255">
+              <rect x="60" y="150" width="150" height="110" rx="6"/>
+              <rect x="230" y="170" width="130" height="90" rx="6"/>
+              <rect x="500" y="150" width="160" height="110" rx="6"/>
+            </g>
+            <g fill="#c9b79c">
+              <rect x="60" y="140" width="150" height="16" rx="6"/>
+              <rect x="230" y="160" width="130" height="16" rx="6"/>
+              <rect x="500" y="140" width="160" height="16" rx="6"/>
+            </g>
+            <circle cx="392" cy="176" r="28" fill="#3d2e1f"/>
+            <path d="M368 206 q24 -14 48 0 l14 96 q-38 16 -76 0 z" fill="#e8572a"/>
+            <path d="M356 236 q-24 -16 -30 -44" stroke="#3d2e1f" stroke-width="11" fill="none" stroke-linecap="round"/>
+            <path d="M428 232 q26 -30 22 -62" stroke="#3d2e1f" stroke-width="11" fill="none" stroke-linecap="round"/>
+            <path d="M370 302 l-16 62 M414 302 l18 62" stroke="#3d2e1f" stroke-width="12" stroke-linecap="round"/>
+            <g stroke="#f4f1ea" stroke-width="3" opacity=".8">
+              <circle cx="392" cy="176" r="58" fill="none" stroke-dasharray="4 10"/>
+            </g>
+            <text x="48" y="382" font-family="sans-serif" font-size="17" font-weight="700" fill="#f4f1ea">收摊之后 · 她的舞台刚刚开始</text>
+          </svg>
+        </div>
+        <div class="fc-focus-body">
+          <span class="fc-tag">编辑部精选</span>
+          <h3 class="fc-h3">《收摊之后》——菜市场阿姨的空货架独舞</h3>
+          <p class="fc-lead">凌晨四点进货、傍晚六点收摊，周阿姨在菜市场卖了二十三年豆腐。这条七分半的短片里，她把最后一块豆腐卖完后，在空货架前跳完了年轻时没机会跳完的一支舞。反差大赛的镜头第一次对准了「收摊后」这十分钟。</p>
+          <div class="fc-tags">
+            <span class="fc-tag">素人改造</span><span class="fc-tag">日常记录</span><span class="fc-tag">城市探索</span>
+          </div>
+          <div class="fc-meta">
+            <span>创作者 <strong>阿岸不岸</strong></span>
+            <span>播放 <strong>486 万</strong></span>
+            <span>点赞 <strong>32.1 万</strong></span>
+            <span>收藏 <strong>7.8 万</strong></span>
+          </div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>321000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《收摊之后》——菜市场阿姨的空货架独舞">复制链接</button>
+            <button class="fc-btn fc-btn--mini" data-fc-comment="《收摊之后》">查看评论</button>
+          </div>
+        </div>
+      </article>
+      <div class="fc-focus-side">
+        <a class="fc-side-item" href="#fc-videos">
+          <span class="fc-idx">01 / 深度测评</span>
+          <h3>《三小时反差实验》：让程序员去花店当一天学徒</h3>
+          <p>一个习惯逻辑与代码的人，被要求给三十束花配色彩。成片里真正的反差点不在职业，而在他第一次凭直觉做选择时的犹豫。</p>
+        </a>
+        <a class="fc-side-item" href="#fc-videos">
+          <span class="fc-idx">02 / 人物访谈</span>
+          <h3>《他们说我不像老师》——一位刺青女孩的讲台十年</h3>
+          <p>林老师在城郊中学教物理十年，业余是乐队贝斯手。我们跟拍了她的两个身份如何在同一周内交叠。</p>
+        </a>
+        <a class="fc-side-item" href="#fc-videos">
+          <span class="fc-idx">03 / 创作幕后</span>
+          <h3>《前99秒》赛道的剪辑逻辑：为什么反差必须在第三秒出现</h3>
+          <p>反差大赛评审组拆解了本届热度前十的作品，总结出三条关于开场、留白与反转的通用规律。</p>
+        </a>
+        <a class="fc-side-item" href="#fc-videos">
+          <span class="fc-idx">04 / 治愈影像</span>
+          <h3>《搬来第七年》——出租屋里的季节更替</h3>
+          <p>同一扇窗户、同一张书桌，七个春夏的延时记录。没有任何剧情，却让无数人在评论区写下自己的搬家年份。</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 热门视频流 -->
+<section class="fc-section fc-section--alt" id="fc-videos">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">Trending · 热门视频</span>
+        <h2 class="fc-h2">反差大赛热门视频流</h2>
+      </div>
+      <p class="fc-lead">按本周热度排序，包含本次反差大赛的官方发布精品内容与社区共创作品，标签可直接筛选。</p>
+    </div>
+
+    <div class="fc-thumb-row">
+      <article class="fc-thumb-card">
+        <figure>
+          <svg viewBox="0 0 480 270" role="img" aria-label="视频缩略图：西装上班族在地铁口弹电吉他">
+            <rect width="480" height="270" fill="#2b3350"/>
+            <rect y="196" width="480" height="74" fill="#1b2138"/>
+            <g fill="#f0d9a0" opacity=".55">
+              <rect x="40" y="40" width="26" height="60" rx="4"/>
+              <rect x="86" y="66" width="26" height="34" rx="4"/>
+              <rect x="132" y="24" width="26" height="76" rx="4"/>
+            </g>
+            <path d="M300 60 q-40 10 -40 54 l0 60 q0 24 22 24 l40 0 q22 0 22 -24 l0 -80 q0 -34 -44 -34z" fill="#e8572a"/>
+            <circle cx="332" cy="200" r="13" fill="#120e14"/>
+            <rect x="326" y="96" width="440" height="0" fill="#000"/>
+            <path d="M380 106 l56 -26 l0 26 z" fill="#f4f1ea"/>
+            <text x="30" y="245" font-family="sans-serif" font-size="15" font-weight="700" fill="#dfe5f5">西装与电吉他 · 地铁口的十分钟</text>
+          </svg>
+        </figure>
+        <div class="fc-thumb-body">
+          <h3>《西装与电吉他》——地铁口的十分钟</h3>
+          <p>投行分析师下班后在地铁站口弹琴，路人从漠然到围聚。拍摄者是他的同事，用手机记录下了这三个月的坚持。</p>
+          <div class="fc-tags"><span class="fc-tag">日常记录</span><span class="fc-tag">音乐现场</span></div>
+          <div class="fc-meta">
+            <span>创作者 <strong>周末的耳机</strong></span>
+            <span>播放 <strong>312 万</strong></span>
+            <span>收藏 <strong>5.2 万</strong></span>
+          </div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>186000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《西装与电吉他》——地铁口的十分钟">复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fc-thumb-card">
+        <figure>
+          <svg viewBox="0 0 480 270" role="img" aria-label="视频缩略图：老式缝纫机前的手作布料特写">
+            <rect width="480" height="270" fill="#efe4d2"/>
+            <rect x="0" y="210" width="480" height="60" fill="#d9c7ac"/>
+            <g stroke="#8a7358" stroke-width="7" fill="none">
+              <path d="M170 210 L170 96 L300 96 L300 150"/>
+              <circle cx="300" cy="162" r="14"/>
+            </g>
+            <rect x="120" y="180" width="150" height="30" rx="6" fill="#b08a5f"/>
+            <g fill="#e8572a" opacity=".85">
+              <path d="M120 100 q60 -40 140 0 q40 20 80 -10 l0 60 q-40 30 -80 10 q-80 -40 -140 0z" opacity=".35"/>
+            </g>
+            <g fill="#c24a2a">
+              <rect x="60" y="60" width="46" height="46" rx="4" transform="rotate(-8 83 83)"/>
+              <rect x="120" y="48" width="46" height="46" rx="4" transform="rotate(6 143 71)"/>
+            </g>
+            <text x="30" y="250" font-family="sans-serif" font-size="15" font-weight="700" fill="#5a4326">社恐女生的一百件手作</text>
+          </svg>
+        </figure>
+        <div class="fc-thumb-body">
+          <h3>《社恐女生的一百件手作》——从不敢开口到摆摊</h3>
+          <p>她用一年做了整整一百件布艺小物，从只敢挂在网店，到第一次走进市集与人面对面。反差发生在最后三分钟。</p>
+          <div class="fc-tags"><span class="fc-tag">手作DIY</span><span class="fc-tag">成长记录</span></div>
+          <div class="fc-meta">
+            <span>创作者 <strong>布丁不打结</strong></span>
+            <span>播放 <strong>276 万</strong></span>
+            <span>收藏 <strong>9.4 万</strong></span>
+          </div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>143000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《社恐女生的一百件手作》——从不敢开口到摆摊">复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fc-thumb-card">
+        <figure>
+          <svg viewBox="0 0 480 270" role="img" aria-label="视频缩略图：城市天台上的清晨太极与滑板同框">
+            <rect width="480" height="270" fill="#e7edf2"/>
+            <circle cx="380" cy="70" r="38" fill="#f6e2b8"/>
+            <rect y="190" width="480" height="80" fill="#c6ccd4"/>
+            <path d="M0 190 L480 190 L480 210 L0 210 Z" fill="#a9b2bd"/>
+            <g fill="#3b4a5e">
+              <circle cx="120" cy="130" r="17"/>
+              <path d="M96 152 q24 -12 48 0 l6 38 l-60 0z"/>
+              <path d="M96 168 L58 168 M144 168 L182 168" stroke="#3b4a5e" stroke-width="9" stroke-linecap="round"/>
+            </g>
+            <g fill="#e8572a">
+              <circle cx="330" cy="150" r="15"/>
+              <path d="M310 170 q20 -10 40 0 l4 26 l-48 0z"/>
+            </g>
+            <path d="M292 198 l70 0" stroke="#e8572a" stroke-width="7" stroke-linecap="round"/>
+            <text x="26" y="248" font-family="sans-serif" font-size="15" font-weight="700" fill="#33404f">天台上，六十八岁与十九岁</text>
+          </svg>
+        </figure>
+        <div class="fc-thumb-body">
+          <h3>《天台上，六十八岁与十九岁》</h3>
+          <p>同一个小区的天台，清晨是老人打太极，傍晚是少年练滑板。导演用一天的光线把两段人生并置在了一起。</p>
+          <div class="fc-tags"><span class="fc-tag">城市探索</span><span class="fc-tag">情感故事</span></div>
+          <div class="fc-meta">
+            <span>创作者 <strong>傍晚的光</strong></span>
+            <span>播放 <strong>241 万</strong></span>
+            <span>收藏 <strong>6.1 万</strong></span>
+          </div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>127000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《天台上，六十八岁与十九岁》">复制链接</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="fc-video-list">
+      <article class="fc-video-row">
+        <span class="fc-video-num">01</span>
+        <div class="fc-video-body">
+          <h3>《我在婚礼上唱了首没人点的歌》</h3>
+          <p>婚礼驻唱歌手阿哲，最擅长暖场。这次他选了一首很冷的民谣，唱给台下唯一听懂的那位老人。评论区有人说，这是反差大赛里最安静的一次高潮。</p>
+          <div class="fc-tags"><span class="fc-tag">音乐现场</span><span class="fc-tag">情感故事</span><span class="fc-tag">官方发布</span></div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>98000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《我在婚礼上唱了首没人点的歌》">复制链接</button>
+            <button class="fc-btn fc-btn--mini" data-fc-comment="《我在婚礼上唱了首没人点的歌》">评论</button>
+          </div>
+        </div>
+        <div class="fc-video-aside"><span>创作者 <b>阿哲的麦克风</b></span><span>播放 <b>198 万</b></span><span>收藏 <b>4.3 万</b></span></div>
+      </article>
+
+      <article class="fc-video-row">
+        <span class="fc-video-num">02</span>
+        <div class="fc-video-body">
+          <h3>《外卖箱里装着一台相机》</h3>
+          <p>骑手老周跑了六万单，手机相册存了三万张城市瞬间。这条片子由他自己剪，粗粝、晃动，但每一帧都对准了他真正想留住的东西。</p>
+          <div class="fc-tags"><span class="fc-tag">深度测评</span><span class="fc-tag">城市探索</span><span class="fc-tag">匠心</span></div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>86000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《外卖箱里装着一台相机》">复制链接</button>
+            <button class="fc-btn fc-btn--mini" data-fc-comment="《外卖箱里装着一台相机》">评论</button>
+          </div>
+        </div>
+        <div class="fc-video-aside"><span>创作者 <b>老周的取景框</b></span><span>播放 <b>176 万</b></span><span>收藏 <b>3.9 万</b></span></div>
+      </article>
+
+      <article class="fc-video-row">
+        <span class="fc-video-num">03</span>
+        <div class="fc-video-body">
+          <h3>《考研三年，我把书桌搬进了山》</h3>
+          <p>连续两年落榜后，她带着全套资料住进了皖南的一间老屋。反差不是成功与失败的对比，而是她重新学会在低效率的日子里呼吸。</p>
+          <div class="fc-tags"><span class="fc-tag">成长记录</span><span class="fc-tag">治愈影像</span><span class="fc-tag">陪伴</span></div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>74000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《考研三年，我把书桌搬进了山》">复制链接</button>
+            <button class="fc-btn fc-btn--mini" data-fc-comment="《考研三年，我把书桌搬进了山》">评论</button>
+          </div>
+        </div>
+        <div class="fc-video-aside"><span>创作者 <b>山里的台灯</b></span><span>播放 <b>152 万</b></span><span>收藏 <b>5.6 万</b></span></div>
+      </article>
+
+      <article class="fc-video-row">
+        <span class="fc-video-num">04</span>
+        <div class="fc-video-body">
+          <h3>《我的爸爸是位哑剧演员》</h3>
+          <p>女儿第一次完整看完父亲的演出。台上他夸张、喧闹，台下他沉默寡言。反差大赛评审称其为「用沉默讲完整的一次叙事」。</p>
+          <div class="fc-tags"><span class="fc-tag">人物访谈</span><span class="fc-tag">情感故事</span><span class="fc-tag">真实</span></div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>71000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《我的爸爸是位哑剧演员》">复制链接</button>
+            <button class="fc-btn fc-btn--mini" data-fc-comment="《我的爸爸是位哑剧演员》">评论</button>
+          </div>
+        </div>
+        <div class="fc-video-aside"><span>创作者 <b>小满写真</b></span><span>播放 <b>138 万</b></span><span>收藏 <b>3.1 万</b></span></div>
+      </article>
+
+      <article class="fc-video-row">
+        <span class="fc-video-num">05</span>
+        <div class="fc-video-body">
+          <h3>《前99秒》赛道精选：三个不敢开口的瞬间</h3>
+          <p>本届新增的短时长赛道，要求所有反差在九十九秒内完成。我们挑了三条结构最干净的作业，并附上评审的逐帧批注。</p>
+          <div class="fc-tags"><span class="fc-tag">教程干货</span><span class="fc-tag">创作幕后</span><span class="fc-tag">官方发布</span></div>
+          <div class="fc-actions">
+            <button class="fc-btn fc-btn--mini" data-fc-like>点赞 <span data-fc-like-count>64000</span></button>
+            <button class="fc-btn fc-btn--mini" data-fc-fav>收藏</button>
+            <button class="fc-btn fc-btn--mini" data-fc-share="《前99秒》赛道精选：三个不敢开口的瞬间">复制链接</button>
+            <button class="fc-btn fc-btn--mini" data-fc-comment="《前99秒》赛道精选：三个不敢开口的瞬间">评论</button>
+          </div>
+        </div>
+        <div class="fc-video-aside"><span>创作者 <b>反差大赛编辑部</b></span><span>播放 <b>121 万</b></span><span>收藏 <b>2.8 万</b></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 专题企划 -->
+<section class="fc-section" id="fc-topics">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">Programs · 专题企划</span>
+        <h2 class="fc-h2">正在进行的反差大赛专题</h2>
+      </div>
+      <p class="fc-lead">由官方发起、社区共创的长期内容企划，每一季聚焦不同的反差切面，持续更新中。</p>
+    </div>
+    <div class="fc-topic-grid">
+      <article class="fc-topic fc-topic--wide">
+        <figure>
+          <svg viewBox="0 0 260 320" role="img" aria-label="专题配图：镜头与人群剪影构成的反差大赛主视觉">
+            <rect width="260" height="320" fill="#2f6f8f"/>
+            <circle cx="130" cy="120" r="66" fill="none" stroke="#cfe3ec" stroke-width="3"/>
+            <circle cx="130" cy="120" r="44" fill="none" stroke="#cfe3ec" stroke-width="3"/>
+            <path d="M130 66 l0 -22 M130 174 l0 22 M76 120 l-22 0 M184 120 l22 0" stroke="#f4f1ea" stroke-width="4" stroke-linecap="round"/>
+            <rect x="0" y="236" width="260" height="84" fill="#1f4e66"/>
+            <g fill="#e8572a">
+              <circle cx="52" cy="278" r="13"/>
+              <circle cx="102" cy="272" r="17"/>
+              <circle cx="158" cy="280" r="12"/>
+              <circle cx="208" cy="270" r="16"/>
+            </g>
+            <path d="M40 320 q90 -36 180 0" fill="#173c50"/>
+          </svg>
+        </figure>
+        <div class="fc-topic-inner">
+          <span class="fc-topic-status">持续更新 · 第 3 季</span>
+          <h3 class="fc-h3">「素人改造」计划：把镜头交给从未被拍摄的人</h3>
+          <p class="fc-lead">我们邀请三百位从未接受过采访的普通人，用一整天时间记录他们工作与生活之间的落差。这不是改造外形，而是让一个人被完整地看见。</p>
+          <ul>
+            <li>《收摊之后》· 菜市场豆腐摊主<span>已上线</span></li>
+            <li>《六点零五分的公交司机》<span>已上线</span></li>
+            <li>《凌晨的机场保洁班》<span>11 月 12 日更新</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="fc-topic">
+        <span class="fc-topic-status">报名中 · 短内容赛道</span>
+        <h3 class="fc-h3">「前99秒」叙事挑战</h3>
+        <p class="fc-lead">限定九十九秒，要求包含至少一次情绪反转。评审更看重结构而非设备，手机拍摄同样可以进入终选。</p>
+        <ul>
+          <li>《我把告白写进了外卖备注》<span>优秀作业</span></li>
+          <li>《最后一次穿校服》<span>热榜第 4</span></li>
+          <li>《假装不认识你》<span>评审推荐</span></li>
+        </ul>
+      </article>
+
+      <article class="fc-topic">
+        <span class="fc-topic-status">长期企划 · 城市共创</span>
+        <h3 class="fc-h3">「同一条街的两个时间」</h3>
+        <p class="fc-lead">同一条街道，清晨与深夜各拍一次。已有来自十九座城市的创作者提交了作品，反差大赛正在建立一份持续生长的城市影像档案。</p>
+        <ul>
+          <li>《凌晨四点的早餐街》<span>成都</span></li>
+          <li>《深夜十一点的写字楼》<span>北京</span></li>
+          <li>《雨天的旧书店》<span>厦门</span></li>
+        </ul>
+      </article>
+
+      <article class="fc-topic">
+        <span class="fc-topic-status">官方发布 · 创作支持</span>
+        <h3 class="fc-h3">「反差剧本工作坊」开放报名</h3>
+        <p class="fc-lead">由平台内容团队与资深纪录片导演共同带领的线上工作坊，帮助创作者把生活里模糊的直觉，整理成可以被拍摄的结构。</p>
+        <ul>
+          <li>第一课：如何找到真正的反差点<span>可回看</span></li>
+          <li>第二课：三分钟内建立人物<span>可回看</span></li>
+          <li>第三课：剪辑台上的取舍<span>11 月 18 日开课</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 创作者矩阵 -->
+<section class="fc-section fc-section--alt" id="fc-authors">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">Creators · 创作者</span>
+        <h2 class="fc-h2">反差大赛签约创作者矩阵</h2>
+      </div>
+      <p class="fc-lead">来自记录、访谈、影像美学与声音设计等不同领域的创作者，共同构成了反差大赛的内容生态。</p>
+    </div>
+    <div class="fc-authors">
+      <article class="fc-author">
+        <div class="fc-avatar" style="background:#e8572a">岸</div>
+        <div>
+          <h3>阿岸不岸</h3>
+          <span class="fc-skill">纪实短片 · 素人改造</span>
+          <p>前新闻摄影记者，习惯在人群中站很久再举起相机。她的片子几乎不用旁白，靠现场声与长镜头完成叙事，代表作《收摊之后》在反差大赛获得年度评审推荐。</p>
+          <div class="fc-author-stats"><span>作品 <b>46</b></span><span>粉丝 <b>82.4 万</b></span></div>
+        </div>
+      </article>
+      <article class="fc-author">
+        <div class="fc-avatar" style="background:#2f6f8f">周</div>
+        <div>
+          <h3>周末的耳机</h3>
+          <span class="fc-skill">音乐现场 · 城市日常</span>
+          <p>白天做财务，晚上背着设备记录城市里的街头演出。他的镜头总是贴近乐手的手和脚，因为「情绪最先从那里漏出来」，是反差大赛社区里最稳定的现场记录者之一。</p>
+          <div class="fc-author-stats"><span>作品 <b>73</b></span><span>粉丝 <b>61.2 万</b></span></div>
+        </div>
+      </article>
+      <article class="fc-author">
+        <div class="fc-avatar" style="background:#7a5ba8">布</div>
+        <div>
+          <h3>布丁不打结</h3>
+          <span class="fc-skill">手作DIY · 成长记录</span>
+          <p>手作博主，擅长把笨拙的尝试过程原样保留。她认为观众需要的不是完美成品，而是「原来她也做坏了三次」的安心感，代表系列《一百件手作计划》持续更新中。</p>
+          <div class="fc-author-stats"><span>作品 <b>58</b></span><span>粉丝 <b>54.7 万</b></span></div>
+        </div>
+      </article>
+      <article class="fc-author">
+        <div class="fc-avatar" style="background:#3d7a5c">光</div>
+        <div>
+          <h3>傍晚的光</h3>
+          <span class="fc-skill">影像美学 · 城市探索</span>
+          <p>自由摄影师，专注自然光与空间关系。他的作品常以同一地点不同时段对切，用光线本身完成反差，反差大赛多期专题的视觉统筹由其担任顾问。</p>
+          <div class="fc-author-stats"><span>作品 <b>39</b></span><span>粉丝 <b>48.9 万</b></span></div>
+        </div>
+      </article>
+      <article class="fc-author">
+        <div class="fc-avatar" style="background:#b4832b">周</div>
+        <div>
+          <h3>老周的取景框</h3>
+          <span class="fc-skill">日常记录 · 户外活动</span>
+          <p>跑了六万单的骑手，也是一位用手机拍照的长期记录者。他的投稿证明了设备从不是门槛，反差大赛为其开设了个人影像专栏《路上三万里》，每月更新。</p>
+          <div class="fc-author-stats"><span>作品 <b>112</b></span><span>粉丝 <b>37.5 万</b></span></div>
+        </div>
+      </article>
+      <article class="fc-author">
+        <div class="fc-avatar" style="background:#c0405c">满</div>
+        <div>
+          <h3>小满写真</h3>
+          <span class="fc-skill">人物访谈 · 情感故事</span>
+          <p>擅长把采访做成一次漫长的散步，让人物在走动中放松下来。她的访谈作品被多家媒体转载，也是反差大赛「人物访谈」方向的核心创作者。</p>
+          <div class="fc-author-stats"><span>作品 <b>31</b></span><span>粉丝 <b>44.1 万</b></span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 关键词解析 -->
+<section class="fc-section" id="fc-define">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">About · 品牌解析</span>
+        <h2 class="fc-h2">什么是「反差大赛」</h2>
+      </div>
+      <p class="fc-lead">一个视频品牌的定义，往往藏在它反复选择拍摄什么里。以下是反差大赛官方对自身定位的完整说明。</p>
+    </div>
+    <div class="fc-define-block fc-define">
+      <p>反差大赛不是一个比赛名称的简单堆叠，而是一套关于「观看方式」的内容方法。它由两部分组成：「反差」是叙事核心，指的是身份、场景、情绪之间形成的强烈落差；「大赛」是组织方式，指的是以公开征集、专业评审与社区投票构成的持续机制。作为官方网站，我们把这个词拆开讲清楚，也把它落到每一条视频、每一次征集和每一份评审意见里。</p>
+
+      <h3 class="fc-h3">一、反差：从视觉噱头到叙事结构</h3>
+      <p>很多人第一次听到反差大赛，会以为这里专收「变装」「前后对比」这类强视觉冲击的短视频。但平台真正在筛选的，是一种<strong>可被讲述的落差</strong>。视觉反差只需要三秒钟，叙事反差却需要铺垫、克制与留白：菜市场阿姨的舞蹈之所以成立，是因为我们先看了她二十三年的凌晨四点；程序员插花之所以动人，是因为镜头耐心地停留在他反复拆掉重来的双手上。</p>
+      <p>因此，反差大赛在评审标准中设置了一条明确的门槛：<strong>反差必须由人物自身的处境解释，而非由剪辑技巧硬造</strong>。我们鼓励创作者在拍摄前先回答三个问题——这个人的日常是什么？他被什么约束？当他短暂离开那个约束时，发生了什么？这三个问题的答案，往往就是一条成片最珍贵的部分。为了让这条标准可执行，编辑部还发布了《反差叙事自查清单》，把抽象的审美判断拆成了可以被逐条核对的写作与拍摄提示，并在每季度的工作坊中逐帧讲解。</p>
+      <p>在内容生态层面，这种坚持带来了一个意外的好处：反差大赛的社区氛围相对温和。观众讨论的往往不是「技巧炫不炫」，而是「我想起了我爸」「这个场景我每天都在经过」，评论区更像一次公共记忆的交换，而不是流量的竞技场。</p>
+
+      <h3 class="fc-h3">二、大赛：公开征集与专业评审的双轨机制</h3>
+      <p>反差大赛的「大赛」二字，指的不是一场短期的热闹，而是全年滚动、按季度更新的征集机制。每季度我们开放 3 至 5 个赛道，既有面向成熟团队的长片单元，也有专为手机用户设置的短内容单元。所有投稿经初审进入候选池后，由评审组与社区投票共同决定终选名单，两类权重各占一半，<strong>避免专业审美与大众口味互相压制</strong>。</p>
+      <p>评审组由纪录片导演、影像编辑与平台内容负责人组成，评审意见会完整公开，包括那些最终未入选的作品收到的修改建议。我们认为，一次大赛真正的价值不在于颁奖，而在于让创作者知道自己离「更好」还差哪一步。这也是反差大赛作为企业与品牌持续运营的重要原则：<strong>公开、可追溯、可复用</strong>。往届的评审纪要、赛道说明与优秀作业拆解，都长期保留在站内，供任何人反复查阅。</p>
+      <p>在合作层面，我们与地方文化机构、独立书店、社区空间建立长期伙伴关系，把线上征集延伸到线下放映与面对面交流。这些活动规模不大，但频率稳定，很多创作者的第一位观众就是在这样的放映现场出现的。</p>
+
+      <h3 class="fc-h3">三、社区：让反差成为一种可被分享的日常</h3>
+      <p>如果说「反差」是方法，「大赛」是机制，那么「社区」就是反差大赛真正的土壤。平台目前签约创作者二百八十六位，注册创作者超过一万两千人，其中超过六成的人从未接受过专业训练。他们拍摄的题材极其分散：有人记录父亲的修表摊，有人拍自己第一次独自旅行，有人只拍出租屋的窗户，一年四季从不换机位。</p>
+      <p>正是这些看似微小的记录，构成了反差大赛最真实的内容底色。我们不追求统一的视觉风格，也不要求所有人使用同一种叙事模板，相反，<strong>我们希望社区保持多元与包容</strong>——有人擅长三分钟讲完一个故事，有人愿意花四十分钟慢慢走近一个人，两种节奏在这里都被尊重。平台提供的支持包括拍摄补贴、设备借用、剪辑指导与版权咨询，帮助创作者在有限的条件下完成表达。</p>
+      <p>作为官方网站，我们也把用户口碑视为产品的一部分。每一条作品下的评论、每一次投稿被退回时收到的说明、每一场线下放映后的反馈，都会被整理进季度内容报告，并反过来影响下一季的赛道设置。换句话说，反差大赛不是一个自上而下的评选机构，而是一个<strong>与创作者和观众一起成长的内容社区</strong>。这份「一起成长」的耐心，正是我们区别于一次性活动的根本所在。</p>
+
+      <h3 class="fc-h3">四、平台：从投稿到放映的完整链路</h3>
+      <p>为了让更多人可以低门槛地参与，反差大赛把整条链路做得足够清楚：注册账号后即可在线提交作品，系统会自动完成格式校验并给出可读性建议；进入候选池后，创作者可以在个人后台查看评审进度与修改意见；入选作品会获得高清正版上架、首页推荐与线下放映机会；落选作品也会保留在个人主页，并附带一份可复用的改进清单。整个过程不收取任何费用，所有版权归属创作者本人。</p>
+      <p>对品牌方与机构用户，我们提供专题共建、影像制作与城市共创三类合作方式，所有合作内容均标注「官方发布」，与自然投稿明确区分，避免社区对内容来源产生误解。这也是我们作为企业级视频品牌对社会责任的基本回应：<strong>让每一个镜头都有出处，让每一次推荐都可解释</strong>。</p>
+      <p>未来，反差大赛会继续把重心放在「人」身上——更多素人、更多城市、更多不被看见的日常。我们相信，真正有影响力的内容不是制造焦虑，而是让人在看完之后，愿意重新看一眼自己身边的世界。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 评价 -->
+<section class="fc-section fc-section--alt" id="fc-reviews">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">Community · 社区口碑</span>
+        <h2 class="fc-h2">反差大赛用户评价</h2>
+      </div>
+      <p class="fc-lead">来自创作者、观众与合作方的真实反馈，涵盖内容质量、评审体验与社区氛围等多个维度。</p>
+    </div>
+    <div class="fc-reviews">
+      <article class="fc-review">
+        <div class="fc-review-top"><div class="fc-avatar" style="background:#e8572a">林</div><b>林三木</b><time>2026-11-08</time></div>
+        <p>第一次投稿被退回时还不太服气，直到点开评审意见，发现对方把我的三分钟逐段拆开写了批注。那五条建议我到现在还存在备忘录里，后来那条片子重剪之后播放翻了十倍。这种被认真对待的感觉，在别处很少遇到。</p>
+        <div class="fc-stars">★★★★★</div>
+      </article>
+      <article class="fc-review">
+        <div class="fc-review-top"><div class="fc-avatar" style="background:#2f6f8f">果</div><b>果汁不加冰</b><time>2026-11-02</time></div>
+        <p>观众视角说一句：这里的评论区真的能看。没有那种互相嘲讽的语气，大家都在讲自己的故事。我常常看完片子再翻评论，能待半个小时。</p>
+        <div class="fc-stars">★★★★★</div>
+      </article>
+      <article class="fc-review">
+        <div class="fc-review-top"><div class="fc-avatar" style="background:#7a5ba8">布</div><b>布丁不打结</b><time>2026-10-29</time></div>
+        <p>作为手作区的创作者，最感激的是平台不逼着我追热点。我的内容节奏很慢，一条片子做一个月，但这里依然有稳定的观众。签约之后拿到了拍摄补贴，换了一支好一点的麦克风，成片质感确实不一样了。</p>
+        <div class="fc-stars">★★★★★</div>
+      </article>
+      <article class="fc-review">
+        <div class="fc-review-top"><div class="fc-avatar" style="background:#3d7a5c">陈</div><b>陈默</b><time>2026-10-24</time></div>
+        <p>坦白讲，专题更新偶尔会延后，官方公告里会写明原因，这点还算诚实。希望以后线下放映能多来几个城市，我所在的地方至今没有排到。</p>
+        <div class="fc-stars">★★★★☆</div>
+      </article>
+      <article class="fc-review">
+        <div class="fc-review-top"><div class="fc-avatar" style="background:#b4832b">周</div><b>老周的取景框</b><time>2026-10-18</time></div>
+        <p>我跑了六万单，投过不少平台，只有这里愿意让我用手机拍的东西上首页。对我这种没学过的人来说，能被看见一次，比奖金重要得多。</p>
+        <div class="fc-stars">★★★★★</div>
+      </article>
+      <article class="fc-review">
+        <div class="fc-review-top"><div class="fc-avatar" style="background:#c0405c">合</div><b>青苔书店·合作方</b><time>2026-10-11</time></div>
+        <p>我们和反差大赛做了两场小型放映，流程沟通很顺，对方会提前把片单和版权情况说明清楚，现场也没有过度商业化的环节。作为场地方，这种克制很难得。</p>
+        <div class="fc-stars">★★★★★</div>
+      </article>
+      <article class="fc-review">
+        <div class="fc-review-top"><div class="fc-avatar" style="background:#5a6b8c">苏</div><b>苏打水没气</b><time>2026-10-05</time></div>
+        <p>建议搜索功能再强一点，有时候想找某一期专题的具体条目，得翻好几页。内容本身没得说，就是找起来费劲。</p>
+        <div class="fc-stars">★★★★☆</div>
+      </article>
+      <article class="fc-review">
+        <div class="fc-review-top"><div class="fc-avatar" style="background:#9c5a2a">半</div><b>半山听雨</b><time>2026-09-27</time></div>
+        <p>《天台上，六十八岁与十九岁》我反复看了四遍。第一次注意到光线，第二次注意到声音，第三次才发现老人打太极的动作和少年滑板的轨迹其实是同一个弧线。这种细节，只有认真做内容的平台才舍得保留。</p>
+        <div class="fc-stars">★★★★★</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 企业动态 -->
+<section class="fc-section" id="fc-news">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">News · 企业动态</span>
+        <h2 class="fc-h2">官方发布与近期更新</h2>
+      </div>
+      <p class="fc-lead">反差大赛平台的重要节点、规则调整与合作公告，都在这里统一发布。</p>
+    </div>
+    <div class="fc-news-grid">
+      <article class="fc-news">
+        <time>2026 / 10 / 28</time>
+        <h3>第三届秋季赛报名通道正式开启</h3>
+        <p>本届新增「素人改造」与「前99秒」两个赛道，总奖金池提升至历史最高，报名截止至 12 月 15 日。所有赛道说明与评审标准已在站内公开。</p>
+      </article>
+      <article class="fc-news">
+        <time>2026 / 10 / 19</time>
+        <h3>高清正版播放器完成升级</h3>
+        <p>全站作品支持自适应码率与隐藏字幕，上传端同步支持竖屏素材自动转制。本次升级由平台内容团队独立完成，未引入第三方服务。</p>
+      </article>
+      <article class="fc-news">
+        <time>2026 / 10 / 06</time>
+        <h3>「城市共创计划」新增六座合作城市</h3>
+        <p>平台与地方文化空间达成新一轮合作，将陆续开展小规模线下放映与创作者见面会，具体排期见专题页更新。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 合作 & 投稿 -->
+<section class="fc-section fc-section--alt" id="fc-join">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">Partners · 合作与投稿</span>
+        <h2 class="fc-h2">与反差大赛一起做内容</h2>
+      </div>
+      <p class="fc-lead">我们与独立空间、文化机构与影像团队长期合作，也随时欢迎新的创作者递交第一条作品。</p>
+    </div>
+    <div class="fc-partners">
+      <div class="fc-partner">青苔书店<small>城市放映伙伴</small></div>
+      <div class="fc-partner">南岸影像社<small>器材支持</small></div>
+      <div class="fc-partner">半山记录<small>联合出品</small></div>
+      <div class="fc-partner">晚风电台<small>声音制作</small></div>
+    </div>
+    <div class="fc-join">
+      <div>
+        <h3>你的第一条反差故事，从投稿开始</h3>
+        <p>不限设备、不限题材，只要叙事真实、结构完整，都欢迎提交。所有入选作品享受高清正版上架与首页推荐，版权始终归创作者本人所有。</p>
+      </div>
+      <div class="fc-actions">
+        <button class="fc-btn fc-btn--primary" data-fc-submit>投稿入口</button>
+        <button class="fc-btn fc-btn--ghost" data-fc-share="反差大赛官方网站" style="border-color:#8f9ab6;color:#e8ecf7">分享官网</button>
+        <button class="fc-btn fc-btn--ghost" data-fc-report style="border-color:#8f9ab6;color:#e8ecf7">反馈问题</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="fc-section" id="fc-faq">
+  <div class="fc-wrap">
+    <div class="fc-section-head">
+      <div>
+        <span class="fc-eyebrow">Help · 帮助</span>
+        <h2 class="fc-h2">反差大赛常见问题</h2>
+      </div>
+      <p class="fc-lead">关于投稿、评审、版权与合作的常见疑问，点击展开查看官方答复。</p>
+    </div>
+    <div class="fc-faq">
+      <details>
+        <summary>参加反差大赛需要付费吗？</summary>
+        <p>不需要。反差大赛所有赛道的报名、投稿与评审均不收取任何费用。平台不会以任何名义向创作者索要报名费、加急费或保证金，如遇此类要求请通过页脚联系方式向我们反馈。</p>
+      </details>
+      <details>
+        <summary>用手机拍摄的作品可以进入终选吗？</summary>
+        <p>可以。评审标准中不设设备门槛，我们更关注叙事是否完整、反差是否由人物自身处境解释。往届已有大量手机作品进入终选并获得推荐，部分作品还被选入线下放映单元。</p>
+      </details>
+      <details>
+        <summary>投稿作品的版权归谁？</summary>
+        <p>版权始终归创作者本人所有。平台仅获得作品在站内展示与宣传推广范围内使用授权，不使用于任何商业广告或转授权，具体条款在投稿时以协议形式明确列出。</p>
+      </details>
+      <details>
+        <summary>投稿后多久能收到反馈？</summary>
+        <p>格式合规的作品通常在 7 个工作日内完成初审。进入候选池的作品会收到进一步的评审意见，未入选的作品同样会得到一份可复用的改进清单，可在个人后台查看。</p>
+      </details>
+      <details>
+        <summary>可以同时投多个赛道吗？</summary>
+        <p>同一作品只能选择一个赛道，但同一位创作者可以提交多部作品。请注意短内容赛道有严格的时长限制，超出时长的作品将无法通过系统校验。</p>
+      </details>
+      <details>
+        <summary>专题企划的更新为什么有时延后？</summary>
+        <p>部分专题涉及线下拍摄与多方协调，遇到排期变动时，我们会在企业动态中说明原因并给出新的更新时间。平台不删改已发布内容，也不下架已完成的作品。</p>
+      </details>
+      <details>
+        <summary>品牌方如何与反差大赛合作？</summary>
+        <p>我们提供专题共建、影像制作与城市共创三类合作方式。所有合作内容会明确标注「官方发布」，与创作者自然投稿区分展示。可通过页脚邮箱提交合作意向，我们通常在 5 个工作日内回复。</p>
+      </details>
+      <details>
+        <summary>平台如何处理不当内容？</summary>
+        <p>反差大赛设有社区公约与举报通道，涉及侵权、虚假信息或侵犯他人隐私的内容会被下架并通知作者。平台坚持内容来源可追溯，所有处理记录保留备查。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- S8 页脚 -->
+<footer class="fc-footer">
+  <div class="fc-wrap">
+    <div class="fc-footer-grid">
+      <div>
+        <div class="fc-footer-brand"><span class="fc-brand-mark" aria-hidden="true"></span>反差大赛</div>
+        <p>反差大赛官方网站，专注真实反差故事的原创视频内容社区。我们为创作者提供拍摄支持、评审反馈与展示机会，为企业与合作方搭建高品质内容生态，持续运营，值得信赖。</p>
+      </div>
+      <div>
+        <h4>内容频道</h4>
+        <a href="#fc-focus">焦点内容</a>
+        <a href="#fc-videos">热门视频</a>
+        <a href="#fc-topics">专题企划</a>
+        <a href="#fc-authors">签约创作者</a>
+      </div>
+      <div>
+        <h4>关于平台</h4>
+        <a href="#fc-define">品牌解析</a>
+        <a href="#fc-news">企业动态</a>
+        <a href="#fc-reviews">社区口碑</a>
+        <a href="#fc-faq">常见问题</a>
+      </div>
+      <div>
+        <h4>联系与合作</h4>
+        <p>合作邮箱：partner@fancha-contest.example</p>
+        <p>投稿咨询：workdays 10:00 - 19:00</p>
+        <p>内容举报：report@fancha-contest.example</p>
+      </div>
+    </div>
+    <div class="fc-footer-bottom">
+      <span>© 2026 反差大赛 版权所有 · 持续运营中</span>
+      <span>官方发布 · 高清正版 · 原创保护</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹窗 / Toast / 回到顶部 -->
+<div class="fc-modal" id="fcModal" role="dialog" aria-modal="true" aria-labelledby="fcModalTitle">
+  <div class="fc-modal-box">
+    <button class="fc-modal-close" id="fcModalClose" aria-label="关闭弹窗">×</button>
+    <h3 id="fcModalTitle">提示</h3>
+    <p id="fcModalText">内容加载中。</p>
+    <div class="fc-modal-actions" id="fcModalActions"></div>
+  </div>
+</div>
+
+<div class="fc-toast" id="fcToast" role="status" aria-live="polite"></div>
+<button class="fc-top" id="fcTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('fcBurger');
+  var nav = document.getElementById('fcNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 760){
+      nav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* ---------- Toast ---------- */
+  var toastEl = document.getElementById('fcToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-on'); }, 2200);
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById('fcSearchInput');
+  var searchBtn = document.getElementById('fcSearchBtn');
+  var feedback = document.getElementById('fcSearchFeedback');
+  var searchIndex = [
+    {key:'素人改造', tip:'「素人改造」专题第 3 季共 3 条推荐'},
+    {key:'前99秒', tip:'「前99秒」赛道精选 3 条作业'},
+    {key:'收摊', tip:'焦点作品《收摊之后》可查看'},
+    {key:'城市', tip:'城市共创计划覆盖 19 座城市'},
+    {key:'创作者', tip:'6 位签约创作者档案可查看'},
+    {key:'投稿', tip:'投稿入口在「合作与投稿」区域'}
+  ];
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      feedback.textContent = '请输入关键词';
+      feedback.classList.add('is-on');
+      return;
+    }
+    var hit = null;
+    for(var i=0;i<searchIndex.length;i++){
+      if(q.indexOf(searchIndex[i].key) > -1 || searchIndex[i].key.indexOf(q) > -1){ hit = searchIndex[i]; break; }
+    }
+    feedback.classList.add('is-on');
+    feedback.textContent = hit ? hit.tip : '暂未找到「' + q + '」，试试「素人改造」「前99秒」';
+    toast('搜索：' + q);
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') doSearch(); });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-fc-like]');
+    if(likeBtn){
+      var cnt = likeBtn.querySelector('[data-fc-like-count]');
+      var cur = parseInt(cnt.textContent,10) || 0;
+      var active = likeBtn.classList.toggle('is-active');
+      cnt.textContent = active ? (cur + 1) : (cur - 1);
+      toast(active ? '已点赞' : '已取消点赞');
+      return;
+    }
+    var favBtn = e.target.closest('[data-fc-fav]');
+    if(favBtn){
+      var on = favBtn.classList.toggle('is-active');
+      favBtn.textContent = on ? '已收藏' : '收藏';
+      toast(on ? '已加入收藏' : '已取消收藏');
+      return;
+    }
+    var shareBtn = e.target.closest('[data-fc-share]');
+    if(shareBtn){
+      share(shareBtn.getAttribute('data-fc-share'));
+      return;
+    }
+    var cmtBtn = e.target.closest('[data-fc-comment]');
+    if(cmtBtn){
+      openModal('评论区', '《' + cmtBtn.getAttribute('data-fc-comment') + '》下已有 1,286 条评论。本篇讨论集中在「反差是否必须靠技巧」这一话题，社区氛围温和，欢迎补充你的看法。', [
+        {label:'写下我的故事', cls:'fc-btn--primary', action:function(){ closeModal(); toast('评论编辑器已就绪（演示）'); }}
+      ]);
+      return;
+    }
+  });
+
+  /* ---------- 分享 / 复制 ---------- */
+  function share(title){
+    var link = 'https://fancha-contest.example/video/' + encodeURIComponent(title.replace(/[《》\s]/g,'').slice(0,18));
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(function(){
+        toast('链接已复制，可分享到微信 / 微博 / QQ');
+      }).catch(function(){
+        toast('分享：' + title);
+      });
+    }else{
+      toast('分享：' + title);
+    }
+  }
+
+  /* ---------- 弹窗 ---------- */
+  var modal = document.getElementById('fcModal');
+  var modalTitle = document.getElementById('fcModalTitle');
+  var modalText = document.getElementById('fcModalText');
+  var modalActions = document.getElementById('fcModalActions');
+  function openModal(title, text, actions){
+    modalTitle.textContent = title;
+    modalText.textContent = text;
+    modalActions.innerHTML = '';
+    (actions || []).forEach(function(a){
+      var b = document.createElement('button');
+      b.className = 'fc-btn ' + (a.cls || 'fc-btn--mini');
+      b.textContent = a.label;
+      b.addEventListener('click', a.action || closeModal);
+      modalActions.appendChild(b);
+    });
+    if(!actions || !actions.length){
+      var ok = document.createElement('button');
+      ok.className = 'fc-btn fc-btn--mini';
+      ok.textContent = '知道了';
+      ok.addEventListener('click', closeModal);
+      modalActions.appendChild(ok);
+    }
+    modal.classList.add('is-open');
+  }
+  function closeModal(){ modal.classList.remove('is-open'); }
+  document.getElementById('fcModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  /* ---------- 投稿 / 反馈 ---------- */
+  document.addEventListener('click', function(e){
+    var sub = e.target.closest('[data-fc-submit]');
+    if(sub){
+      openModal('投稿入口', '请准备：作品文件或链接、300 字以内的创作说明、赛道选择（素人改造 / 前99秒 / 城市共创 / 长片单元）。提交后 7 个工作日内完成初审，未入选作品同样会收到改进清单。', [
+        {label:'我已了解，开始投稿', cls:'fc-btn--primary', action:function(){ closeModal(); toast('投稿通道已打开（演示）'); }},
+        {label:'先看评审标准', action:function(){ closeModal(); document.getElementById('fc-define').scrollIntoView({behavior:'smooth'}); }}
+      ]);
+      return;
+    }
+    var rep = e.target.closest('[data-fc-report]');
+    if(rep){
+      openModal('反馈问题', '你可以反馈内容侵权、播放异常、投稿流程疑问或合作咨询。为便于跟进，请尽量描述具体页面与时间，我们承诺 5 个工作日内回复。', [
+        {label:'确认提交', cls:'fc-btn--primary', action:function(){ closeModal(); toast('反馈已提交，感谢你的耐心'); }}
+      ]);
+    }
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('fcTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ topBtn.classList.add('is-on'); }
+    else{ topBtn.classList.remove('is-on'); }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
